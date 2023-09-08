@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::selection {
+    background: rgb(0, 123, 255, 0.3);
+}
+
+.content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/*navbar*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    background: #14141e;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo1 {
+    width: 80px;
+}
+
+.navbar .menu-list {
+    display: inline-flex;
+}
+
+.menu-list li {
+    list-style: none;
+}
+
+.menu-list li a {
+    color: #fff8f0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-list li a:hover {
+    color: #a31521;
+}
+
+.banner {
+    background: url("") no-repeat;
+    height: 10vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-list .cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+@media (max-width: 1230px) {
+    .content {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 868px) {
+    body.disabled {
+        overflow: hidden;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .navbar .menu-list {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #222;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.show .menu-list {
+        left: 0%;
+    }
+
+    .navbar .menu-list li {
+        margin-top: 45px;
+    }
+
+    .navbar .menu-list li a {
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navbar.show .menu-list li a {
+        margin-left: 0px;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #14141e;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #f1f1f1;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #f28f3a;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #f1f1f1;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #201c1c;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #f1f1f1;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #201c1c;
+    background-color: #f1f1f1;
+}
+
+/* Drivers */
+.Drivers {
+    background-color: #14141e;
+    height: 3500px;
+}
+
+.Driversh1 {
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Red Bull */
+.redbullh2 {
+    color: #a31521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.max {
+    padding-left: 20px;
+}
+
+.verstappen {
+    position: absolute;
+    left: 17%;
+    top: 42%;
+    color: #f1f1f1;
+}
+
+.m1 {
+    color: #f28f3a;
+}
+
+.n1 {
+    color: #a31521;
+}
+
+.e1 {
+    color: #f1f1f1;
+}
+
+.a1 {
+    color: #48629b;
+}
+
+.b1 {
+    color: #201c1c;
+}
+
+.l1 {
+    color: #f5d324;
+}
+
+.i1 {
+    color: #a31521;
+}
+
+.sergio {
+    padding-left: 20px;
+}
+
+.perez {
+    position: absolute;
+    left: 17%;
+    top: 68%;
+    color: #f1f1f1;
+}
+
+.s1 {
+    color: #006845;
+}
+
+.m2 {
+    color: #006845;
+}
+
+.a2 {
+    color: #a31521;
+}
+
+/* Ferrari */
+.ferrarih2 {
+    color: #008d44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r1 {
+    color: #f1f1f1;
+}
+
+.r2 {
+    color: #a31521;
+}
+
+.charles {
+    padding-left: 20px;
+}
+
+.leclere {
+    position: absolute;
+    left: 17%;
+    top: 98%;
+    color: #f1f1f1;
+}
+
+.c1 {
+    color: #a31521;
+}
+
+.m3 {
+    color: #a31521;
+}
+
+.a3 {
+    color: #888;
+}
+
+.carlos {
+    padding-left: 20px;
+}
+
+.sainz {
+    position: absolute;
+    left: 17%;
+    top: 128%;
+    color: #f1f1f1;
+}
+
+.c2 {
+    color: #a31521;
+}
+
+.s2 {
+    color: #a31521;
+}
+
+.a4 {
+    color: #f5d324;
+}
+
+.n2 {
+    color: #a31521;
+}
+
+/* Mercedes */
+.mercedesh2 {
+    color: #00908a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lewis {
+    padding-left: 20px;
+}
+
+.hamilton {
+    position: absolute;
+    left: 17%;
+    top: 158%;
+    color: #f1f1f1;
+}
+
+.s3 {
+    color: #00908a;
+}
+
+.b2 {
+    color: #a31521;
+}
+
+.i2 {
+    color: #022782;
+}
+
+.george {
+    padding-left: 20px;
+}
+
+.russell {
+    position: absolute;
+    left: 17%;
+    top: 188%;
+    color: #f1f1f1;
+}
+
+.g1 {
+    color: #00908a;
+}
+
+/* Alpine */
+.alpineh2 {
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a5 {
+    color: #002395;
+}
+
+.n3 {
+    color: #a31521;
+}
+
+.pierre {
+    padding-left: 20px;
+}
+
+.gasly {
+    position: absolute;
+    left: 17%;
+    top: 222%;
+    color: #f1f1f1;
+}
+
+.p1 {
+    color: #002395;
+}
+
+.f1 {
+    color: #002395;
+}
+
+.n4 {
+    color: #a31521;
+}
+
+.esteban {
+    padding-left: 20px;
+}
+
+.ocon {
+    position: absolute;
+    left: 17%;
+    top: 248%;
+    color: #f1f1f1;
+}
+
+/* Mclaren */
+.mclarenh2 {
+    color: #f28f3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lando {
+    padding-left: 20px;
+}
+
+.norris {
+    position: absolute;
+    left: 17%;
+    top: 280%;
+    color: #f1f1f1;
+}
+
+.l2 {
+    color: #f28f3a;
+}
+
+.oscar {
+    padding-left: 20px;
+}
+
+.piastri {
+    position: absolute;
+    left: 17%;
+    top: 308%;
+    color: #f1f1f1;
+}
+
+.o1 {
+    color: #002395;
+}
+
+.a6 {
+    color: #002395;
+}
+
+.u1 {
+    color: #a31521;
+}
+
+.t1 {
+    color: #002395;
+}
+
+.a7 {
+    color: #002395;
+}
+
+.i3 {
+    color: #002395;
+}
+
+.c3 {
+    color: #002395;
+}
+
+/* Alfa Romeo */
+.alfaromeoh2 {
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r3 {
+    color: #a31521;
+}
+
+.valterri {
+    padding-left: 20px;
+}
+
+.bottas {
+    position: absolute;
+    left: 17%;
+    top: 335%;
+    color: #f1f1f1;
+}
+
+.f2 {
+    color: #002395;
+}
+
+.zhou {
+    padding-left: 20px;
+}
+
+.guanyu {
+    position: absolute;
+    left: 17%;
+    top: 365%;
+    color: #f1f1f1;
+}
+
+.guanyu .c {
+    color: #a31521;
+}
+
+.e3 {
+    color: #f5d324;
+}
+
+/* Aston Martin */
+.astonmartinh2 {
+    color: #006845;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fernando {
+    padding-left: 20px;
+}
+
+.alonso {
+    position: absolute;
+    left: 17%;
+    top: 395%;
+    color: #f1f1f1;
+}
+
+.f3 {
+    color: #006845;
+}
+
+.lance {
+    padding-left: 20px;
+}
+
+.stroll {
+    position: absolute;
+    left: 17%;
+    top: 420%;
+    color: #f1f1f1;
+}
+
+.l3 {
+    color: #006845;
+}
+
+.c4 {
+    color: #a31521;
+}
+
+.e4 {
+    color: #a31521;
+}
+
+/* Haas */
+.haash2 {
+    color: #a31521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kevin {
+    padding-left: 20px;
+}
+
+.magnussen {
+    position: absolute;
+    left: 17%;
+    top: 455%;
+    color: #f1f1f1;
+}
+
+.k1 {
+    color: #a31521;
+}
+
+.d1 {
+    color: #a31521;
+}
+
+.n5 {
+    color: #a31521;
+}
+
+.nico {
+    padding-left: 20px;
+}
+
+.hulkenberg {
+    position: absolute;
+    left: 17%;
+    top: 480%;
+    color: #f1f1f1;
+}
+
+.n6 {
+    color: #a31521;
+}
+
+.d2 {
+    color: #201c1c;
+}
+
+.i4 {
+    color: #f5d324;
+}
+
+.s4 {
+    color: #a31521;
+}
+
+/* Alpha Tauri */
+.alphataurih2 {
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t2 {
+    text-transform: uppercases;
+}
+
+.a8 {
+    text-transform: lowercase;
+}
+
+.yuki {
+    padding-left: 20px;
+}
+
+.tsunoda {
+    position: absolute;
+    left: 17%;
+    top: 510%;
+    color: #f1f1f1;
+}
+
+.p2 {
+    color: #a31521;
+}
+
+.nyck {
+    padding-left: 20px;
+}
+
+.devries {
+    position: absolute;
+    left: 17%;
+    top: 540%;
+    color: #f1f1f1;
+}
+
+/* Williams */
+.williamsh2 {
+    color: #00a0de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alex {
+    padding-left: 20px;
+}
+
+.albon {
+    position: absolute;
+    left: 17%;
+    top: 570%;
+    color: #f1f1f1;
+}
+
+.a9 {
+    color: #00a0de;
+}
+
+.logan {
+    padding-left: 20px;
+}
+
+.sergeat {
+    position: absolute;
+    left: 17%;
+    top: 595%;
+    color: #f1f1f1;
+}
+
+.l4 {
+    color: #00a0de;
+}
+
+.t4 {
+    color: #a0182f;
+}
+
+.a10 {
+    color: #2c2948;
+}
+
+.a11 {
+    color: #002395;
+}
+
+.i6 {
+    color: #a31521;
+}
